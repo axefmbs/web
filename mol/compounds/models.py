@@ -21,17 +21,17 @@ class Compound(models.Model):
         #丰度
         abundance=models.CharField(max_length=50,verbose_name='丰度',blank=True,null=True)
         #HPLC分析报告
-        hplc_file=models.FileField(upload_to='assay/hplc_file',verbose_name='HPLC分析报告',blank=True,null=True)
+        hplc_file=models.FileField(upload_to='upload/compounds/assay/hplc_file',verbose_name='HPLC分析报告',blank=True,null=True)
         #GC分析报告
-        gc_file=models.FileField(upload_to='assay/gc_file',verbose_name='GC分析报告',blank=True,null=True)
+        gc_file=models.FileField(upload_to='upload/compounds/assay/gc_file',verbose_name='GC分析报告',blank=True,null=True)
         #1H NMR分析报告
-        hnmr_file=models.FileField(upload_to='assay/hnmr_file',verbose_name='1H NMR分析报告',blank=True,null=True)
+        hnmr_file=models.FileField(upload_to='upload/compounds/assay/hnmr_file',verbose_name='1H NMR分析报告',blank=True,null=True)
         #13C NMR分析报告
-        cnmr_file=models.FileField(upload_to='assay/cnmr_file',verbose_name='13C NMR分析报告',blank=True,null=True)
+        cnmr_file=models.FileField(upload_to='upload/compounds/assay/cnmr_file',verbose_name='13C NMR分析报告',blank=True,null=True)
         #LC MS分析报告
-        lcms_file=models.FileField(upload_to='assay/lcms_file',verbose_name='LC MS分析报告',blank=True,null=True)
+        lcms_file=models.FileField(upload_to='upload/compounds/assay/lcms_file',verbose_name='LC MS分析报告',blank=True,null=True)
         #doc
-        doc_file=models.FileField(upload_to='doc_file',verbose_name='技术报告',blank=True,null=True)
+        doc_file=models.FileField(upload_to='upload/compounds/doc_file',verbose_name='技术报告',blank=True,null=True)
         #描述
         discription = models.TextField(verbose_name='描述',blank=True,null=True)
         #发布时间
