@@ -23,5 +23,5 @@ class CustomerAdmin(admin.ModelAdmin):
 	list_filter=['pub_date']
 	search_fields=['name']
 
-admin.site.register(customer,CustomerAdmin)
+admin.site.register(Customer,CustomerAdmin)
 # Register your models here.

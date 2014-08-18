@@ -24,6 +24,8 @@ class CompoundAdmin(admin.ModelAdmin):
         'cnmr_file',
         'lcms_file',
         'doc_file',
+        #'suppliers',
+        #'customers',
         'discription',
         'was_published_recently',
         )

@@ -3,6 +3,9 @@ from django.db import models
 import datetime
 from django.utils import timezone
 
+from customers.models import Customer
+from suppliers.models import Supplier
+
 class Compound(models.Model):
         #CAS号
         casNo=models.CharField(max_length=20,verbose_name='CAS号',blank=True,null=True)
@@ -32,6 +35,10 @@ class Compound(models.Model):
         lcms_file=models.FileField(upload_to='upload/compounds/assay/lcms_file',verbose_name='LC MS分析报告',blank=True,null=True)
         #doc
         doc_file=models.FileField(upload_to='upload/compounds/doc_file',verbose_name='技术报告',blank=True,null=True)
+        #供应商
+        suppliers=models.ManyToManyField(Supplier)
+        #客户
+        customers=models.ManyToManyField(Customer)
         #描述
         discription = models.TextField(verbose_name='描述',blank=True,null=True)
         #发布时间
