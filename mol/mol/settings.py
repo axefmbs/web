@@ -39,6 +39,8 @@ INSTALLED_APPS = (
     'compounds',
     'suppliers',
     'customers',
+    'compoundprices',
+    'compoundclasss',
 )
 
 MIDDLEWARE_CLASSES = (

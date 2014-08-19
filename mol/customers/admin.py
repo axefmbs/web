@@ -12,6 +12,7 @@ class CustomerAdmin(admin.ModelAdmin):
 		'customer_name',
 		'customer_tel',
 		'customer_fox',
+		'customer_address',
 		'customer_email',
 		'customer_bank',
 		'customer_account',

@@ -2,6 +2,7 @@ from django.contrib import admin
 from suppliers.models import Supplier,Contact
 
 class ContactInline(admin.TabularInline):
+#class ContactInline(admin.StackedInline):
 	model=Contact
 	extra=3
 
@@ -12,6 +13,7 @@ class SupplierAdmin(admin.ModelAdmin):
 		'supplier_name',
 		'supplier_tel',
 		'supplier_fox',
+		'supplier_address',
 		'supplier_email',
 		'supplier_bank',
 		'supplier_account',

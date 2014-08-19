@@ -3,11 +3,11 @@ from django.db import models
 import datetime
 from django.utils import timezone
 
-
 class Supplier(models.Model):
 	supplier_name=models.CharField(max_length=100,verbose_name=u'供应商名称')
 	supplier_tel=models.CharField(max_length=20,verbose_name=u'电话')
 	supplier_fox=models.CharField(max_length=20,verbose_name=u'传真')
+	supplier_address=models.CharField(max_length=250,verbose_name=u'地址')
 	supplier_email=models.EmailField(verbose_name=u'电子邮件')
 	supplier_bank=models.CharField(max_length=100,verbose_name=u'开户行')
 	supplier_account=models.CharField(max_length=50,verbose_name=u'账户')
@@ -24,9 +24,10 @@ class Supplier(models.Model):
 class Contact(models.Model):
 	supplier=models.ForeignKey(Supplier)
 	contact_name=models.CharField(max_length=100,verbose_name=u'联系人名称')
-	contact_jobtitle=models.CharField(max_length=50,verbose_name=u'职务')
+	contact_jobtitle=models.CharField(max_length=100,verbose_name=u'职务')
 	contact_tel=models.CharField(max_length=20,verbose_name=u'电话')
 	contact_fox=models.CharField(max_length=20,verbose_name=u'传真')
+	#contact_address=models.CharField(max_length=250,verbose_name=u'地址')
 	contact_email=models.EmailField(verbose_name=u'电子邮件')
 	contact_qq=models.CharField(max_length=20,verbose_name=u'QQ')
 
